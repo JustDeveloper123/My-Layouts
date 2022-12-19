@@ -1,0 +1,321 @@
+@import 'nullstyle.scss';
+@import url('https://fonts.googleapis.com/css2?family=Edu+VIC+WA+NT+Beginner&family=Lato:wght@900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Edu+VIC+WA+NT+Beginner&family=Lato:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Edu+VIC+WA+NT+Beginner&family=Lato:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Edu+VIC+WA+NT+Beginner&family=Lato&display=swap');
+
+$Lato:'Lato', sans-serif;
+
+.title {
+    margin: 128px auto auto auto;
+    text-align: center;
+    font-family: $Lato;
+    font-size: 34px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.16em;
+    color: #000000;
+}
+
+//Body
+.header {
+    width: 100%;
+    height: 1080px;
+    background: url(../img/bg.png) no-repeat center top;
+    background-size: cover;
+    display: block;
+    &__logo {
+        img {
+            margin: 166px auto 155px;
+        }
+    }
+    &__text {
+        font-family: $Lato;
+        text-align: center;
+        line-height: 50px;
+        letter-spacing: 0.16em;
+        color: #ffffff;
+        font-size: 25px;
+        font-weight: 400;
+        text-transform: lowercase;
+        &::first-line {
+        font-family: $Lato;
+        text-align: center;
+        text-transform: uppercase;
+        font-size: 34px;
+        font-weight: 900;
+        }
+        img {
+            margin: 48px auto auto auto;
+        }
+    }
+    &__button {
+        margin: 200px auto 75px;
+        button {
+            font-family: $Lato;
+            font-size: 16px;
+            font-weight: 400;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            color: #ffffff;
+            padding: 16px 42px;
+            border: white solid 1px;
+            background: none;
+            &:hover {
+                border: 1px solid white;
+                background-color: white;
+                color: black;
+            }
+            &:active {
+                color: white;
+                background-color: #555780;
+            }
+        }
+    }
+    &__arrow {}
+}
+.nav {
+    .block {
+        box-shadow: 0px 2px 0px 0px rgba(0,0,0,0.05);
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+    .home {
+        margin: auto auto;
+        button {
+            font-family: $Lato;
+            font-size: 17px;
+            font-weight: 700;
+            color: #6d6d6d;
+            text-transform: uppercase;
+            align-content: center;
+            padding: 15px 21px;
+            background-color: white;
+            &:first-child {
+                color: #ad9b5f;
+            }
+            &:hover {
+                background: #555780;
+                background-size: cover;
+                border-radius: 0 0 10px 10px;
+                color: white;
+            }
+            &:active {
+                background: white;
+                border-right: 1px solid #555780;
+                border-bottom: 1px solid #555780;
+                border-left: 1px solid #555780;
+                color: black;
+                span {
+                    border-bottom: 2px solid #555780;
+                }
+            }
+        }
+    }
+    .about {
+        &__title {
+            img {
+                margin: 35px auto;
+            }
+        }
+        &__text {
+            text-align: center;
+            font-family: $Lato;
+            font-size: 14px;
+            line-height: 25px;
+            font-weight: 300;
+            color: #868585;
+            margin: 0 0 65px 0;
+        }
+        &__desc {
+            max-width: 840px;
+            margin: 0px auto;
+            display: flex;
+        }
+        &__column {
+            padding: 0px 15px;
+            flex: 0 0 33.333%;
+        }
+        .item-about {
+            font-family: $Lato;
+            &__icon {
+                width: 92px;
+                height: 92px;
+                border-radius: 50%;
+                border: 2px solid #f1f1f1;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin: 0 auto 40px auto;
+            }
+            &__title {
+                text-align: center;
+                color: #000000;
+                font-size: 22px;
+                text-transform: uppercase;
+                letter-spacing: 0.16em;
+                margin: 0 0 35px 0;
+            }
+            &__text {
+                text-align: center;
+                font-size: 14px;
+                line-height: 26px;
+                font-weight: 300;
+                color: #868585;
+            }
+        }
+    }
+    .portfolio {
+        background-color: #f3f3f3;
+        margin: 60px 0 0 0;
+        &__titl e{
+            padding: 104px 0 0 0;
+            img {
+                margin: 43px 0 50px 0;
+            }
+        }
+        &__home {
+            display: flex;
+            justify-content: space-between;
+            width: 290px;
+            margin: auto auto 136px auto;
+            button {
+                font-family: $Lato;
+                font-size: 17px;
+                height: 25px;
+                font-weight: 700;
+                color: #6d6d6d;
+                text-transform: uppercase;
+                &:first-child {
+                    color: #ad9b5f;
+                }
+                &:hover {
+                    text-shadow: 0 0 1px purple;
+                    border-bottom: 2px solid #555780;
+                }
+            }
+        }
+        &__blocks {
+            width: 1140px;
+            display: flex;
+            align-content: space-between;
+            flex-wrap: wrap;
+            margin: auto;
+            div {
+                width: 538px;
+                height: 365px;
+                background-color: #eaeaea;
+                margin: 0 15px 15px 15px;
+                img {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+        &__button {
+            text-align: center;
+            margin: 58px 0 0 0;
+            padding: 0 0 63px 0;
+            button {
+                font-family: $Lato;
+                font-size: 16px;
+                font-weight: 400;
+                letter-spacing: 0.06em;
+                text-transform: uppercase;
+                color: #ffffff;
+                padding: 16px 42px;
+                border: black solid 1px;
+                background: none;
+                color: black;
+                &:hover {
+                    color: white;
+                    background: #555780;
+                    border: 1px solid #555780;
+                }
+                &:active {
+                    color: #555780;
+                    background: white;
+                    border: 1px solid black;
+                    span {
+                        border-bottom: 2px solid #555780;
+                    }
+                }
+            }
+        }
+    }
+    .partners {
+        background: url(../img/bg_partners.png) 0 100% no-repeat;
+        background-size: cover;
+        &__title {
+            padding: 100px 0 0 0;
+            font-family: $Lato;
+            font-size: 30.4px;
+            line-height: 1.2;
+            font-weight: 300;
+            letter-spacing: 0.06em;
+            color: #ffffff;
+            text-align: center;
+        }
+        &__partners {
+            margin: 94px auto auto auto;
+            padding: 0 0 104px 0;
+            width: 590px;
+            text-align: center;
+            align-content: center;
+            display: flex;
+            .partners-icon {
+                flex: 0 0 25.000%;
+            }
+        }
+    }
+    .contact {
+        &__title {
+            margin: 182px auto auto auto;
+            img {
+                margin: 46px auto 118px auto;
+            }
+        }
+        &__input {
+            width: 718px;
+            margin: auto auto;
+            font-family: $Lato;
+            font-size: 14px;
+            font-weight: 700;
+        }
+    }
+}
+.footer {
+    width: 100%;
+    background-color: #3c3c3c;
+    text-align: center;
+    font-family: $Lato;
+    &__block {
+        width: 270px;
+        margin: auto auto;
+    }
+    &__logo {
+        img {
+            margin: 46px auto 41px;
+        }
+    }
+    &__home {
+        display: flex;
+        margin: auto auto;
+        justify-content: space-between;
+        button {
+            color: #a4a4a4;
+            font-size: 14px;
+            background: none;
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+    &__copyright {
+        font-size: 14px;
+        color: #6c6c6c;
+        margin-top: 34px;
+        padding-bottom: 49px;
+    }
+}
