@@ -1,0 +1,628 @@
+@media screen and (max-width: 1220px) {
+  * .default-title {
+    font-size: 3.4rem;
+    letter-spacing: 0.15rem;
+  }
+  .header__container .header__content .header__logo {
+    font-size: 1.4rem;
+  }
+  .header__container .header__content .header__tel-num {
+    font-size: 1.2rem;
+  }
+  .header__container .header__content .header__search input {
+    font-size: 1.2rem;
+  }
+  .main .main-bg__nav .main-bg__container .main-bg__list {
+    column-gap: 35px;
+  }
+  .main .main-bg__nav .main-bg__container .main-bg__list .main-bg__link {
+    font-size: 1.2rem;
+  }
+  .main .main-bg__container .main-bg__title {
+    padding-top: 300px;
+    margin-bottom: 40px;
+    font-size: 2rem;
+  }
+  .main .main-bg__container .main-bg__text {
+    max-width: 480px;
+    font-size: 1.45rem;
+  }
+  .main .main-bg__container .main-bg__btns {
+    margin: 130px auto 0;
+    padding-bottom: 250px;
+  }
+  .main .main-bg__container .main-bg__btns .main-bg__btn {
+    font-size: 1.4rem;
+  }
+  .main .brands__container {
+    padding: 125px 20px 175px;
+  }
+  .main .brands__container .brands__items {
+    margin-top: 80px;
+    row-gap: 100px;
+  }
+  .main .brands__container .brands__items .brands__item.item .item__content {
+    padding: 8px 40px;
+  }
+  .main .brands__container .brands__items .brands__item.item .item__content .item__title {
+    font-size: 1.3rem;
+  }
+  .main .watches__container .watches__btns {
+    padding: 380px 0;
+  }
+  .main .watches__container .watches__btns .watches__btn {
+    width: 300px;
+    font-size: 1.4rem;
+    white-space: nowrap;
+  }
+  .main .top-sell__container {
+    padding: 140px 20px 80px;
+  }
+  .main .reviews__container {
+    padding: 80px 20px;
+  }
+  .main .reviews__container .reviews__items {
+    margin-top: 80px;
+    column-gap: 64px;
+    row-gap: 75px;
+  }
+  .main .reviews__container .reviews__items .reviews__item.item {
+    padding-bottom: 60px;
+  }
+  .main .reviews__container .reviews__items .reviews__item.item .item__name {
+    font-size: 1.2rem;
+  }
+  .main .reviews__container .reviews__items .reviews__item.item .item__rating {
+    margin-top: 20px;
+    gap: 12px;
+  }
+  .main .reviews__container .reviews__items .reviews__item.item .item__rating .item__star-rate {
+    width: 17px;
+    height: 16px;
+  }
+  .main .reviews__container .reviews__items .reviews__item.item .item__text {
+    margin-top: 22px;
+  }
+  .main .reviews__container .reviews__btn {
+    margin-top: 75px;
+  }
+  .main .reviews__container .reviews__btn a .text {
+    font-size: 1.2rem;
+  }
+  .main .about__container {
+    padding: 80px 20px;
+  }
+  .main .about__container .about__text {
+    margin-top: 60px;
+    font-size: 1.17rem;
+    row-gap: 35px;
+  }
+  .main .news__container {
+    padding: 80px 20px 220px;
+  }
+  .main .news__container .news__items {
+    margin-top: 70px;
+  }
+  .main .news__container .news__items .news__item.item .item__text {
+    margin-top: 10px;
+    font-weight: 300;
+    font-size: 1.1rem;
+  }
+  .footer__container .footer__lists {
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    column-gap: 3.5%;
+  }
+  .footer__container .footer__lists .footer__nav__title {
+    font-size: 1.1rem;
+  }
+  .footer__container .footer__lists .footer__nav .footer__list.list {
+    margin-top: 20px;
+    gap: 19px;
+  }
+  .footer__container .footer__lists .footer__nav .footer__list.list .list__link {
+    font-size: 0.97rem;
+    color: #fff;
+  }
+  .footer__container .footer__lists .footer__nav .footer__list.list .list__link:hover {
+    border-bottom: 1px solid #fff;
+    padding-bottom: 1px;
+  }
+  .footer__container .footer__social.social {
+    margin-top: 55px;
+  }
+  .footer__container .footer__copy {
+    font-size: 1rem;
+  }
+}
+@media screen and (max-width: 1100px) {
+  .main .reviews__container .reviews__items {
+    margin-top: 70px;
+    column-gap: 30px;
+    row-gap: 55px;
+  }
+  .main .reviews__container .reviews__items .reviews__item.item {
+    padding-bottom: 45px;
+  }
+  .main .reviews__container .reviews__items .reviews__item.item .item__name {
+    font-size: 1.1rem;
+  }
+  .main .reviews__container .reviews__items .reviews__item.item .item__rating {
+    gap: 10px;
+  }
+  .main .reviews__container .reviews__btn {
+    margin-top: 65px;
+  }
+}
+@media screen and (max-width: 1050px) {
+  .main .main-bg__nav .main-bg__container .main-bg__list {
+    column-gap: 30px;
+  }
+  .main .main-bg__nav .main-bg__container .main-bg__list .main-bg__link {
+    font-size: 1.1rem;
+  }
+  .main .main-bg__container .main-bg__title {
+    margin-bottom: 35px;
+    font-size: 1.7rem;
+    color: #fff;
+  }
+  .main .main-bg__container .main-bg__text {
+    max-width: 460px;
+    font-size: 1.4rem;
+  }
+  .main .main-bg__container .main-bg__btns {
+    margin: 100px auto 0;
+    padding-bottom: 135px;
+  }
+  .main .main-bg__container .main-bg__btns .main-bg__btn {
+    font-size: 1.2rem;
+    padding: 15px 40px;
+  }
+  .main .brands__container .brands__items {
+    margin-top: 60px;
+    column-gap: 25px;
+    row-gap: 90px;
+  }
+  .main .brands__container .brands__items .brands__item.item .item__content {
+    padding: 8px 30px;
+  }
+  .main .brands__container .brands__items .brands__item.item .item__content .item__title {
+    font-size: 1.1rem;
+    font-weight: 500;
+  }
+  .footer__container .footer__lists {
+    row-gap: 25px;
+  }
+  .footer__container .footer__lists .footer__nav .footer__nav__title {
+    font-size: 1rem;
+  }
+  .footer__container .footer__lists .footer__nav .footer__list.list {
+    margin-top: 10px;
+    gap: 11px;
+  }
+  .footer__container .footer__lists .footer__nav .footer__list.list .list__link {
+    font-size: 0.9rem;
+  }
+  .footer__container .footer__social.social {
+    margin-top: 40px;
+    align-items: center;
+  }
+  .footer__container .footer__social.social .social__terms.terms .terms__list .terms__link {
+    font-size: 1rem;
+  }
+  .footer__container .footer__copy {
+    margin-top: 30px;
+    font-size: 0.9rem;
+  }
+}
+@media screen and (max-width: 900px) {
+  .main .main-bg__nav {
+    border-top: 2px solid #FFCB8E;
+  }
+  .main .main-bg__nav .main-bg__container .main-bg__list {
+    max-width: 550px;
+    column-gap: 40px;
+    row-gap: 10px;
+    margin: 0 auto;
+  }
+  .main .main-bg__nav .main-bg__container .main-bg__list .main-bg__link {
+    font-size: 1.1rem;
+  }
+  .main .main-bg__container .main-bg__title {
+    padding-top: 300px;
+  }
+  .main .top-sell__container .top-sell__items {
+    column-gap: 25px;
+    row-gap: 50px;
+  }
+  .main .top-sell__container .top-sell__items .top-sell__item.item .item__content .item__title {
+    font-size: 1.1rem;
+  }
+  .main .top-sell__container .top-sell__items .top-sell__item.item .item__content .item__subtitle {
+    font-size: 1rem;
+  }
+  .main .top-sell__container .top-sell__items .top-sell__item.item .item__content .item__price {
+    font-size: 1rem;
+  }
+  .main .reviews__container .reviews__items {
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    column-gap: 50px;
+  }
+}
+@media screen and (max-width: 850px) {
+  .header__container {
+    padding: 8px 20px;
+  }
+  .header__container .header__content .header__logo {
+    font-weight: 500;
+    font-size: 1.3rem;
+  }
+  .header__container .header__content .header__tel-num {
+    font-size: 1.1rem;
+    position: relative;
+    top: 0;
+    left: 0;
+    transform: none;
+  }
+  .header__container .header__content .header__search {
+    max-width: 125px;
+  }
+  .header__container .header__content .header__search input {
+    font-size: 1rem;
+  }
+  .header__container .header__content .header__search .search-icon {
+    width: 25px;
+  }
+  .header__container .header__content .header__search .clear-input {
+    bottom: -40px;
+    font-size: 1rem;
+  }
+}
+@media screen and (max-width: 800px) {
+  .main .brands__container .brands__items {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+  .main .watches__container .watches__btns {
+    padding: 280px 0;
+  }
+  .main .watches__container .watches__btns .watches__btn {
+    padding: 22px 40px;
+    width: 245px;
+    font-size: 1.1rem;
+  }
+  .main .top-sell__container .top-sell__items {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  }
+  .main .news__container .news__items {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+}
+@media screen and (max-width: 750px) {
+  .main .brands__container .brands__items {
+    column-gap: 20px;
+    row-gap: 60px;
+  }
+  .main .brands__container .brands__items .brands__item.item .item__content {
+    padding: 0;
+    background: transparent;
+  }
+  .main .brands__container .brands__items .brands__item.item .item__content .item__title {
+    font-size: 1rem;
+    color: #fff;
+  }
+}
+@media screen and (max-width: 700px) {
+  .header {
+    background: transparent;
+    transition: 0.4s;
+  }
+  .header.bg {
+    background: #0E0E0E;
+  }
+  .header__container {
+    padding-top: 18px;
+    padding-bottom: 18px;
+  }
+  .header__container .header__content {
+    height: 30.5px;
+  }
+  .header__container .header__content .header__logo {
+    font-weight: 400;
+    font-size: 1rem;
+  }
+  .header__container .header__content .header__tel-num {
+    font-weight: 400;
+    font-size: 1rem;
+  }
+  .header__container .header__content .header__search {
+    display: none;
+  }
+  .header__container .header__content .header__burger.burger {
+    display: block;
+  }
+  .main .main-bg__bg {
+    background: url("../img/main-bg_adaptive.png") center/cover no-repeat;
+    filter: brightness(0.4);
+  }
+  .main .main-bg__nav {
+    display: none;
+  }
+  .main .main-bg__container .main-bg__search__wrap {
+    display: flex;
+  }
+  .main .main-bg__container .main-bg__title {
+    margin-top: 57px;
+    padding-top: 0;
+    font-size: 1.5rem;
+    margin-bottom: 25px;
+  }
+  .main .main-bg__container .main-bg__text {
+    max-width: 360px;
+    font-weight: 500;
+    font-size: 1.1rem;
+  }
+  .main .main-bg__container .main-bg__btns {
+    margin-top: 485px;
+    gap: 40px;
+    padding-bottom: 163px;
+  }
+  .main .main-bg__container .main-bg__btns .main-bg__btn {
+    width: 245px;
+    font-size: 1rem;
+    font-weight: 700;
+  }
+  .main .main-bg__container .main-bg__btns .main-bg__btn.add {
+    display: block;
+  }
+  .footer {
+    background: #0E0E0E;
+  }
+  .footer__bg {
+    display: none;
+  }
+  .footer__container .footer__lists {
+    display: block;
+  }
+  .footer__container .footer__lists .footer__nav .footer__nav__title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 0;
+    font-weight: 500;
+    font-size: 1rem;
+    color: #fff;
+    text-transform: uppercase;
+  }
+  .footer__container .footer__lists .footer__nav .footer__nav__title.acc__title svg {
+    display: block;
+    width: 17px;
+    height: 8px;
+    stroke: #FFCB8E;
+    transition: transform 0.4s ease 0s;
+  }
+  .footer__container .footer__lists .footer__nav .footer__nav__title.acc__title.active svg {
+    transform: rotate(-180deg);
+  }
+  .footer__container .footer__lists .footer__nav .footer__list.list {
+    margin-top: 0;
+    gap: 12px;
+    margin: 10px 0;
+  }
+  .footer__container .footer__lists .footer__nav .footer__list.list .list__link {
+    font-weight: 300;
+    font-size: 1rem;
+    white-space: normal;
+  }
+  .footer__container .footer__lists .footer__nav .acc__wrap {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease 0s;
+  }
+  .footer__container .footer__social.social {
+    margin-top: 38px;
+  }
+  .footer__container .footer__social.social .social__terms.terms .terms__list {
+    flex-wrap: wrap;
+    column-gap: 32px;
+    row-gap: 10px;
+  }
+  .footer__container .footer__social.social .social__terms.terms .terms__list .terms__link {
+    font-size: 1rem;
+  }
+  .footer__container .footer__social.social .social__web {
+    display: none;
+  }
+  .footer__container .footer__copy {
+    margin-top: 67px;
+  }
+}
+@media screen and (max-width: 625px) {
+  * .default-title {
+    font-size: 2.5rem;
+  }
+  .main .main-bg__container .main-bg__search__wrap .main-bg__search input {
+    font-size: 0.8125rem;
+  }
+  .main .main-bg__container .main-bg__search__wrap .main-bg__search input::placeholder {
+    font-size: 0.8125rem;
+  }
+  .main .main-bg__container .main-bg__search__wrap .main-bg__search .search-icon {
+    padding-left: 4px;
+    width: 30px;
+    height: 22px;
+  }
+  .main .main-bg__container .main-bg__title {
+    margin-top: 67px;
+    font-weight: 500;
+    font-size: 1.25rem;
+    margin-bottom: 20px;
+  }
+  .main .main-bg__container .main-bg__text {
+    max-width: 340px;
+    font-weight: 400;
+    font-size: 1rem;
+  }
+  .main .brands__container {
+    padding: 80px 20px 100px;
+  }
+  .main .brands__container .brands__items {
+    margin-top: 60px;
+    grid-template-columns: repeat(auto-fit, minmax(175px, 1fr));
+    row-gap: 23px;
+    column-gap: 20px;
+  }
+  .main .brands__container .brands__items .brands__item.item .item__content .item__title {
+    font-size: 1rem;
+    font-weight: 400;
+  }
+  .main .watches__container .watches__btns {
+    padding: 152px 0;
+    flex-direction: column;
+    gap: 40px;
+  }
+  .main .watches__container .watches__btns .watches__btn {
+    padding: 14px 44px;
+    font-weight: 700;
+    width: 245px;
+    font-size: 1rem;
+  }
+  .main .top-sell__container {
+    padding: 100px 20px 50px;
+  }
+  .main .top-sell__container .top-sell__items {
+    margin-top: 60px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    row-gap: 10px;
+    column-gap: 20px;
+  }
+  .main .top-sell__container .top-sell__items .top-sell__item.item {
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.06);
+  }
+  .main .top-sell__container .top-sell__items .top-sell__item.item .item__content {
+    margin-top: 12px;
+  }
+  .main .top-sell__container .top-sell__items .top-sell__item.item .item__content .item__title {
+    font-size: 1rem;
+  }
+  .main .top-sell__container .top-sell__items .top-sell__item.item .item__content .item__subtitle {
+    font-size: 0.8125rem;
+  }
+  .main .top-sell__container .top-sell__items .top-sell__item.item .item__content .item__price {
+    font-size: 0.8125rem;
+  }
+  .main .reviews__container {
+    padding: 50px 61px;
+  }
+  .main .reviews__container .reviews__items {
+    margin-top: 60px;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    row-gap: 40px;
+  }
+  .main .reviews__container .reviews__items .reviews__item.item {
+    padding-bottom: 32px;
+  }
+  .main .reviews__container .reviews__items .reviews__item.item .item__name {
+    font-size: 1rem;
+  }
+  .main .reviews__container .reviews__items .reviews__item.item .item__rating {
+    margin-top: 18px;
+    gap: 15px;
+  }
+  .main .reviews__container .reviews__items .reviews__item.item .item__rating .item__star-rate {
+    width: 14px;
+    height: 13px;
+  }
+  .main .reviews__container .reviews__items .reviews__item.item .item__text {
+    margin-top: 18px;
+  }
+  .main .reviews__container .reviews__items .reviews__item.item .reviews__btn a .text {
+    font-size: 1rem;
+  }
+  .main .reviews__container .reviews__items .reviews__item.item.remove {
+    display: none;
+  }
+  .main .about__container {
+    padding: 50px 20px;
+  }
+  .main .about__container .about__text {
+    font-size: 1rem;
+    row-gap: 14px;
+  }
+  .main .news__container {
+    padding: 50px 20px 200px;
+  }
+  .main .news__container .news__items {
+    margin-top: 60px;
+    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+    gap: 20px;
+  }
+  .main .news__container .news__items .news__item.item .item__text {
+    font-size: 1rem;
+  }
+  .main .news__container .news__items .news__item.item.remove {
+    display: none;
+  }
+}
+@media screen and (max-width: 555px) {
+  * .default-title {
+    font-size: 2rem;
+  }
+}
+@media screen and (max-width: 479px) {
+  .main .news__container .news__items {
+    gap: 40px;
+  }
+}
+@media screen and (max-width: 459px) {
+  .main .top-sell__container .top-sell__items .top-sell__item.item.remove {
+    display: none;
+  }
+  .main .reviews__container {
+    padding: 50px 20px;
+  }
+  .footer {
+    background: #0E0E0E;
+  }
+  .footer__bg {
+    display: none;
+  }
+  .footer__container .footer__social.social {
+    justify-content: center;
+  }
+  .footer__container .footer__social.social .social__terms.terms .terms__list {
+    flex-direction: column;
+    align-items: center;
+  }
+  .footer__container .footer__social.social .social__terms.terms .terms__list .terms__link {
+    font-size: 1rem;
+  }
+  .footer__container .footer__social.social .social__web {
+    display: none;
+  }
+  .footer__container .footer__copy {
+    margin-top: 67px;
+  }
+}
+@media screen and (max-width: 440px) {
+  .header .header__container .header__content .header__tel-num {
+    display: none;
+  }
+  .header .header__container .header__content .header__burger.burger .burger__nav {
+    width: 100%;
+    border: none;
+  }
+  .header .header__container .header__content .header__burger.burger .burger__nav .burger__tel-num {
+    display: block;
+  }
+}
+@media screen and (max-width: 409px) {
+  * .default-title {
+    font-size: 1.6rem;
+  }
+  .main .brands__container .brands__items .brands__item.item.remove {
+    display: none;
+  }
+  .main .brands__container .brands__items .brands__item.item .item__content .item__title {
+    font-size: 1.5rem;
+  }
+}/*# sourceMappingURL=media.css.map */

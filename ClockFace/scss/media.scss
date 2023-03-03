@@ -1,0 +1,990 @@
+@import 'variables.scss';
+
+@media screen and (max-width: 1220px) {
+    * {
+        .default-title {
+            font-size: 3.4rem;
+            letter-spacing: $font-letter-spacing;
+        }
+    }
+    .header {
+        &__container {
+            .header__content {
+                .header__logo {
+                    font-size: 1.4rem;
+                }
+                .header__tel-num {
+                    font-size: 1.2rem;
+                }
+                .header__search {
+                    input {
+                        font-size: 1.2rem;
+                    }
+                }
+            }
+        }
+    }
+    .main {
+        .main-bg {
+            &__nav {
+                .main-bg__container {
+                    .main-bg__list {
+                        column-gap: 35px;
+    
+                        .main-bg__link {
+                            font-size: 1.2rem;
+                        }
+                    }
+                }
+            }
+            &__container {
+                .main-bg__title {
+                    padding-top: 300px;
+                    margin-bottom: 40px;
+                    font-size: 2rem;
+                }
+                .main-bg__text {
+                    max-width: 480px;
+                    font-size: 1.45rem;
+                }
+                .main-bg__btns {
+                    margin: 130px auto 0;
+                    padding-bottom: 250px;
+    
+                    .main-bg__btn {
+                        font-size: 1.4rem;
+                    }
+                }
+            }
+        }
+        .brands {
+            &__container {
+                padding: 125px $cont-x-p 175px;
+    
+                .brands__items {
+                    margin-top: 80px;
+                    row-gap: 100px;
+    
+                    .brands__item.item {
+                        .item__content {
+                            padding: 8px 40px;
+    
+                            .item__title {
+                                font-size: 1.3rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .watches {
+            &__container {
+                .watches__btns {
+                    padding: 380px 0;
+    
+                    .watches__btn {
+                        width: 300px;
+                        font-size: 1.4rem;
+                        white-space: nowrap;
+                    }
+                }
+            }
+        }
+        .top-sell {
+             &__container {
+                padding: 140px $cont-x-p 80px;
+            }
+        }
+        .reviews {
+            &__container {
+                padding: 80px $cont-x-p;
+    
+                .reviews__items {
+                    margin-top: 80px;
+                    column-gap: 64px;
+                    row-gap: 75px;
+    
+                    .reviews__item.item {
+                        padding-bottom: 60px;
+        
+                        .item__name {
+                            font-size: 1.2rem;
+                        }
+                        .item__rating {
+                            margin-top: 20px;
+                            gap: 12px;
+        
+                            .item__star-rate {
+                                width: 17px;
+                                height: 16px;
+                            }
+                        }
+                        .item__text {
+                            margin-top: 22px;
+                        }
+                    }
+                }
+                .reviews__btn {
+                    margin-top: 75px;
+    
+                    a {
+                        .text {
+                            font-size: 1.2rem;
+                        }
+                    }
+                }
+            }
+        }
+        .about {
+            &__container {
+                padding: 80px $cont-x-p;
+    
+                .about__text {
+                    margin-top: 60px;
+                    font-size: 1.17rem;
+                    row-gap: 35px;
+                }
+            }
+        }
+        .news {
+            &__container {
+                padding: 80px $cont-x-p 220px;
+    
+                .news__items {
+                    margin-top: 70px;
+    
+                    .news__item.item {
+                        .item__text {
+                            margin-top: 10px;
+                            font-weight: 300;
+                            font-size: 1.1rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .footer {
+        &__container {
+            .footer__lists {
+                grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+                column-gap: 3.5%;
+    
+                .footer__nav {
+                    &__title {
+                        font-size: 1.1rem;
+                    }
+                    .footer__list.list {
+                        margin-top: 20px;
+                        gap: 19px;
+    
+                        .list__link {
+                            font-size: .97rem;
+                            color: $white;
+    
+                            &:hover {
+                                border-bottom: 1px solid $white;
+                                padding-bottom: 1px;
+                            }
+                        }
+                    }
+                }
+            }
+            .footer__social.social {
+                margin-top: 55px;
+            }
+            .footer__copy {
+                font-size: 1rem;
+            }
+        }
+    }
+}
+
+
+
+
+
+@media screen and (max-width: 1100px) {
+    .main {
+        .reviews {
+            &__container {
+                .reviews__items {
+                    margin-top: 70px;
+                    column-gap: 30px;
+                    row-gap: 55px;
+    
+                    .reviews__item.item {
+                        padding-bottom: 45px;
+        
+                        .item__name {
+                            font-size: 1.1rem;
+                        }
+                        .item__rating {
+                            gap: 10px;
+                        }
+                    }
+                }
+                .reviews__btn {
+                    margin-top: 65px;
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+@media screen and (max-width: 1050px) {
+    .main {
+        .main-bg {
+            &__nav {
+                .main-bg__container {
+                    .main-bg__list {
+                        column-gap: 30px;
+    
+                        .main-bg__link {
+                            font-size: 1.1rem;
+                        }
+                    }
+                }
+            }
+            &__container {
+                .main-bg__title {
+                    margin-bottom: 35px;
+                    font-size: 1.7rem;
+                    color: $white;
+                }
+                .main-bg__text {
+                    max-width: 460px;
+                    font-size: 1.4rem;
+                }
+                .main-bg__btns {
+                    margin: 100px auto 0;
+                    padding-bottom: 135px;
+    
+                    .main-bg__btn {
+                        font-size: 1.2rem;
+                        padding: 15px 40px;
+                    }
+                }
+            }
+        }
+        .brands {
+            &__container {
+                .brands__items {
+                    margin-top: 60px;
+                    column-gap: 25px;
+                    row-gap: 90px;
+    
+                    .brands__item.item {
+                        .item__content {
+                            padding: 8px 30px;
+    
+                            .item__title {
+                                font-size: 1.1rem;
+                                font-weight: 500;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .footer {
+        &__container {
+            .footer__lists {
+                row-gap: 25px;
+
+                .footer__nav {
+                    .footer__nav__title {
+                        font-size: 1rem;
+                    }
+                    .footer__list.list {
+                        margin-top: 10px;
+                        gap: 11px;
+
+                        .list__link {
+                            font-size: .9rem;
+                        }
+                    }
+                }
+            }
+            .footer__social.social {
+                margin-top: 40px;
+                align-items: center;
+
+                .social__terms.terms {
+                    .terms__list {
+                        .terms__link {
+                            font-size: 1rem;
+                        }
+                    }
+                }
+            }
+            .footer__copy {
+                margin-top: 30px;
+                font-size: .9rem;
+            }
+        }
+    }
+}
+
+
+
+
+
+@media screen and (max-width: 900px) {
+    .main {
+        .main-bg {
+            &__nav {
+                border-top: 2px solid $gold;
+
+                .main-bg__container {
+                    .main-bg__list {
+                        max-width: 550px;
+                        column-gap: 40px;
+                        row-gap: 10px;
+                        margin: 0 auto;
+    
+                        .main-bg__link {
+                            font-size: 1.1rem;
+                        }
+                    }
+                }
+            }
+            &__container {
+                .main-bg__title {
+                    padding-top: 300px;
+                }
+            }
+        }
+        .top-sell {
+            &__container {
+                .top-sell__items {
+                    column-gap: 25px;
+                    row-gap: 50px;
+
+                    .top-sell__item.item {
+                        .item__content {
+                            .item__title {
+                                font-size: 1.1rem;
+                            }
+                            .item__subtitle {
+                                font-size: 1rem;
+                            }
+                            .item__price {
+                                font-size: 1rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .reviews {
+            &__container {
+                .reviews__items {
+                    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+                    column-gap: 50px;
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+@media screen and (max-width: 850px) {
+    .header {
+        &__container {
+            padding: 8px $cont-x-p;
+    
+            .header__content {
+                .header__logo {
+                    font-weight: 500;
+                    font-size: 1.3rem;
+                }
+                .header__tel-num {
+                    font-size: 1.1rem;
+                    position: relative;
+                    top: 0; left: 0;
+                    transform: none;
+                }
+                .header__search {
+                    max-width: 125px;
+    
+                    input {
+                        font-size: 1rem;
+                    }
+                    .search-icon {
+                        width: 25px;
+                    }
+                    .clear-input {
+                        bottom: -40px;
+                        font-size: 1rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+@media screen and (max-width: 800px) {
+    .main {
+        .brands {
+            &__container {
+                .brands__items {
+                    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+                }
+            }
+        }
+        .watches {
+            &__container {
+                .watches__btns {
+                    padding: 280px 0;
+    
+                    .watches__btn {
+                        padding: 22px 40px;
+                        width: 245px;
+                        font-size: 1.1rem;
+                    }
+                }
+            }
+        }
+        .top-sell {
+            &__container {
+                .top-sell__items {
+                    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+                }
+            }
+        }
+        .news {
+            &__container {
+                .news__items {
+                    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+@media screen and (max-width: 750px) {
+    .main {
+        .brands {
+            &__container {
+                .brands__items {
+                    column-gap: 20px;
+                    row-gap: 60px;
+
+                    .brands__item.item {
+                        .item__content {
+                            padding: 0;
+                            background: transparent;
+    
+                            .item__title {
+                                font-size: 1rem;
+                                color: $white;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+@media screen and (max-width: 700px) {
+    .header {
+        background: transparent;
+        transition: .4s;
+
+        &.bg {
+            background: $light-black;
+        }
+
+        &__container {
+            padding-top: 18px;
+            padding-bottom: 18px;
+
+            .header__content {
+                height: calc(66.5px - (18px * 2));
+
+                .header__logo {
+                    font-weight: 400;
+                    font-size: 1rem;
+                }
+                .header__tel-num {
+                    font-weight: 400;
+                    font-size: 1rem;
+                }
+                .header__search {
+                    display: none;
+                }
+                .header__burger.burger {
+                    display: block;
+                }
+            }
+        }
+    }
+    .main {
+        .main-bg {
+            &__bg {
+                background: url('../img/main-bg_adaptive.png') center / cover no-repeat;
+                filter: brightness(.4);
+            }
+            &__nav {
+                display: none;
+            }
+            &__container {
+                .main-bg__search__wrap {
+                    display: flex;
+                }
+
+                .main-bg__title {
+                    margin-top: 57px;
+                    padding-top: 0;
+                    font-size: 1.5rem;
+                    margin-bottom: 25px;
+                }
+                .main-bg__text {
+                    max-width: 360px;
+                    font-weight: 500;
+                    font-size: 1.1rem;
+                }
+                .main-bg__btns {
+                    margin-top: 485px;
+                    gap: 40px;
+                    padding-bottom: 163px;
+
+                    .main-bg__btn {
+                        width: 245px;
+                        font-size: 1rem;
+                        font-weight: 700;
+
+                        &.add {
+                            display: block;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .footer {
+        background: $light-black;
+
+        &__bg {
+            display: none;
+        }
+        &__container {
+            .footer__lists {
+                display: block;
+
+                .footer__nav {
+                    .footer__nav__title {
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        padding: 16px 0;
+                        font-weight: 500;
+                        font-size: 1rem;
+                        color: $white;
+                        text-transform: uppercase;
+
+                        &.acc__title {
+                            svg {
+                                display: block;
+                                width: 17px;
+                                height: 8px;
+                                stroke: $gold;
+                                transition: transform .4s ease 0s;
+                            }
+                            &.active {
+                                svg {
+                                    transform: rotate(-180deg);
+                                }
+                            }
+                        }
+                    }
+                    .footer__list.list {
+                        margin-top: 0;
+                        gap: 12px;
+                        margin: 10px 0;
+                        
+                        .list__link {
+                            font-weight: 300;
+                            font-size: 1rem;
+                            white-space: normal;
+                        }
+                    }
+
+                    .acc__wrap {
+                        max-height: 0;
+                        overflow: hidden;
+                        transition: max-height .4s ease 0s;
+                    }
+                }
+            }
+            .footer__social.social {
+                margin-top: calc(60px - 22px);
+                
+                .social__terms.terms {
+                    .terms__list {
+                        flex-wrap: wrap;
+                        column-gap: 32px;
+                        row-gap: 10px;
+                        
+                        .terms__link {
+                            font-size: 1rem;
+                        }
+                    }
+                }
+                .social__web {
+                    display: none;
+                }
+            }
+            .footer__copy {
+                margin-top: 67px;
+            }
+        }
+    }
+}
+
+
+
+
+
+@media screen and (max-width: 625px) {
+    * {
+        .default-title {
+            font-size: 2.5rem;
+        }
+    }
+    .main {
+        .main-bg {
+            &__container {
+                .main-bg__search__wrap {
+                    .main-bg__search {
+                        input {
+                            font-size: 0.8125rem;
+
+                            &::placeholder {
+                                font-size: 0.8125rem;
+                            }
+                        }
+
+                        .search-icon {
+                            padding-left: 4px;
+                            width: 30px;
+                            height: 22px;;
+                        }
+                    }
+                }
+                .main-bg__title {
+                    margin-top: 67px;
+                    font-weight: 500;
+                    font-size: 1.25rem;
+                    margin-bottom: 20px;
+                }
+                .main-bg__text {
+                    max-width: 340px;
+                    font-weight: 400;
+                    font-size: 1rem;
+                }
+            }
+        }
+        .brands {
+            &__container {
+                padding: 80px $cont-x-p 100px;
+    
+                .brands__items {
+                    margin-top: 60px;
+                    grid-template-columns: repeat(auto-fit, minmax(175px, 1fr));
+                    row-gap: 23px;
+                    column-gap: 20px;
+
+                    .brands__item.item {
+                        .item__content {
+                            .item__title {
+                                font-size: 1rem;
+                                font-weight: 400;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .watches {
+            &__container {
+                .watches__btns {
+                    padding: 152px 0;
+                    flex-direction: column;
+                    gap: 40px;
+    
+                    .watches__btn {
+                        padding: 14px 44px;
+                        font-weight: 700;
+                        width: 245px;
+                        font-size: 1rem;
+                    }
+                }
+            }
+        }
+        .top-sell {
+             &__container {
+                padding: 100px $cont-x-p 50px;
+
+                .top-sell__items {
+                    margin-top: 60px;
+                    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+                    row-gap: 10px;
+                    column-gap: 20px;
+
+                    .top-sell__item.item {
+                        padding: 15px;
+                        background: rgba(255, 255, 255, .06);
+
+                        .item__content {
+                            margin-top: 12px;
+    
+                            .item__title {
+                                font-size: 1rem;
+                            }
+                            .item__subtitle {
+                                font-size: 0.8125rem;
+                            }
+                            .item__price {
+                                font-size: 0.8125rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .reviews {
+            &__container {
+                padding: 50px calc($cont-x-p + 41px);
+
+                .reviews__items {
+                    margin-top: 60px;
+                    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+                    row-gap: 40px;
+
+                    .reviews__item.item {
+                        padding-bottom: 32px;
+                        
+                        .item__name {
+                            font-size: 1rem;
+                        }
+                        .item__rating {
+                            margin-top: 18px;
+                            gap: 15px;
+
+                            .item__star-rate {
+                                width: 14px;
+                                height: 13px;
+                            }
+                        }
+                        .item__text {
+                            margin-top: 18px;
+                        }
+                        .reviews__btn {
+                            a {
+                                .text {
+                                    font-size: 1rem;
+                                }
+                            }
+                        }
+
+                        &.remove {
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+        .about {
+            &__container {
+                padding: 50px $cont-x-p;
+    
+                .about__text {
+                    font-size: 1rem;
+                    row-gap: 14px;
+                }
+            }
+        }
+        .news {
+            &__container {
+                padding: 50px $cont-x-p 200px;
+    
+                .news__items {
+                    margin-top: 60px;
+                    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+                    gap: 20px;
+
+                    .news__item.item {
+                        .item__text {
+                            font-size: 1rem;
+                        }
+
+                        &.remove {
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+@media screen and (max-width: 555px) {
+    * {
+        .default-title {
+            font-size: 2rem;
+        }
+    }
+}
+
+
+
+
+
+@media screen and (max-width: 479px) {
+    .main {
+        .news {
+            &__container {
+                .news__items {
+                    gap: 40px;
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+@media screen and (max-width: 459px) {
+    .main {
+        .top-sell {
+            &__container {
+                .top-sell__items {
+                    .top-sell__item.item {
+                        &.remove {
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+        .reviews {
+            &__container {
+                padding: 50px calc($cont-x-p);
+            }
+        }
+    }
+    .footer {
+        background: $light-black;
+
+        &__bg {
+            display: none;
+        }
+        &__container {
+            .footer__social.social {
+                justify-content: center;
+
+                .social__terms.terms {
+                    .terms__list {
+                        flex-direction: column;
+                        align-items: center;
+                        
+                        .terms__link {
+                            font-size: 1rem;
+                        }
+                    }
+                }
+                .social__web {
+                    display: none;
+                }
+            }
+            .footer__copy {
+                margin-top: 67px;
+            }
+        }
+    }
+}
+
+
+
+
+
+@media screen and (max-width: 440px) {
+    .header {
+        .header__container {
+            .header__content {
+                .header__tel-num {
+                    display: none;
+                }
+                .header__burger.burger {
+                    .burger__nav {
+                        width: 100%;
+                        border: none;
+
+                        .burger__tel-num {
+                            display: block;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+@media screen and (max-width: 409px) {
+    * {
+        .default-title {
+            font-size: 1.6rem;
+        }
+    }
+    .main {
+        .brands {
+            &__container {
+                .brands__items {
+                    .brands__item.item {
+                        &.remove {
+                            display: none;
+                        }
+                        .item__content {
+                            .item__title {
+                                font-size: 1.5rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
