@@ -231,15 +231,19 @@
   border-right: 2px solid #FFCB8E;
   overflow: auto;
   transition: 0.4s;
+  display: flex;
+  flex-direction: column;
 }
-.header__container .header__content .header__burger.burger .burger__nav .burger__title {
+.header__container .header__content .header__burger.burger .burger__nav .burger__title a {
   font-size: 1.3rem;
   color: #FFCB8E;
   letter-spacing: 0.15rem;
   margin: 0 15px 0 25px;
+  display: inline-block;
 }
 .header__container .header__content .header__burger.burger .burger__nav .burger__list {
   margin-top: 20px;
+  flex: 1 1 auto;
 }
 .header__container .header__content .header__burger.burger .burger__nav .burger__list .burger__link {
   display: block;
@@ -256,7 +260,6 @@
 }
 .header__container .header__content .header__burger.burger .burger__nav .burger__tel-num {
   display: none;
-  position: fixed;
   width: 100%;
   padding: 8px 0;
   left: 0;

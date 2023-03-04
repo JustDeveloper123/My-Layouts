@@ -243,15 +243,21 @@
                     border-right: 2px solid $gold;
                     overflow: auto;
                     transition: .4s;
+                    display: flex;
+                    flex-direction: column;
                     
                     .burger__title {
-                        font-size: 1.3rem;
-                        color: $gold;
-                        letter-spacing: $font-letter-spacing;
-                        margin: 0 15px 0 25px;
+                        a {
+                            font-size: 1.3rem;
+                            color: $gold;
+                            letter-spacing: $font-letter-spacing;
+                            margin: 0 15px 0 25px;
+                            display: inline-block;
+                        }
                     }
                     .burger__list {
                         margin-top: 20px;
+                        flex: 1 1 auto;
                         
                         .burger__link {
                             display: block;
@@ -270,7 +276,6 @@
                     }
                     .burger__tel-num {
                         display: none;
-                        position: fixed;
                         width: 100%;
                         padding: 8px 0;
                         left: 0;
