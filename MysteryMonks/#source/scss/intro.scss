@@ -1,0 +1,388 @@
+.intro {
+    padding-top: 20px;
+    padding-bottom: 131px;
+
+    @media screen and (max-width: 1080px) {
+        padding-bottom: 0;
+    }
+
+    &__title {
+        font-size: 58px;
+        color: $black;
+        text-align: center;
+        position: relative;
+        z-index: 1;
+
+        @media screen and (max-width: 600px) {
+            text-align: left;
+        }
+        @media screen and (max-width: $containerWidthSum) {
+            @include resp-property(font-size, 58, 34, $size-containerWidth, $size-mobileWidth, 1, 1);
+        }
+
+        .orange-text {
+            color: $orange;
+        }
+    }
+    &__text {
+        margin-top: 17px;
+        font-weight: 600;
+        font-size: 22px;
+        text-align: center;
+        line-height: 32px;
+        position: relative;
+        z-index: 1;
+
+        @media screen and (max-width: $containerWidthSum) {
+            @include resp-property(font-size, 22, 16, $size-containerWidth, $size-mobileWidth, 1, 1);
+            @include resp-property(margin-top, 17, 12, $size-containerWidth, $size-mobileWidth, 1, 1);
+        }
+        @media screen and (max-width: 1160px) {
+            padding: 0 50px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        @media screen and (max-width: 600px) {
+            padding: 0;
+            text-align: left;
+        }
+    }
+    &__block {
+        margin-top: 141px;
+        display: flex;
+        justify-content: space-between;
+
+        @media screen and (max-width: 1080px) {
+            flex-direction: column;
+            align-items: center;
+            @include resp-property(margin-top, 141, 30, 1080, $size-mobileWidth, 1, 1);
+        }
+    }
+    &__video.video {
+        position: relative;
+        display: flex;
+        align-items: center;
+        width: 790px;
+
+        @media screen and (max-width: 1080px) {
+            width: 100%;
+            min-width: 100%;
+            max-width: 100%;
+            padding-bottom: 100px;
+            margin-bottom: 100px;
+            transition: all .3s ease 0s;
+
+            @include resp-property(padding-bottom, 100, 40, 1080, $size-mobileWidth, 1, 1);
+            @include resp-property(margin-bottom, 100, 40, 1080, $size-mobileWidth, 1, 1);
+            
+            &._active-video {
+                @include resp-property(margin-bottom, 100, 40, 1080, $size-mobileWidth, 1, 1);
+                margin-bottom: 100px;
+                padding-bottom: 0;
+            }
+        }
+
+        &._fullscreen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            z-index: 150;
+
+            &::before {
+                content: '';
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100vw;
+                height: 100vh;
+                background-color: $dark-grey;
+            }
+
+            video {
+                object-fit: contain;
+                margin: -70px 0;
+            }
+        }
+        
+        &._active-video {
+            .video__poster,
+            .video__start-btn {
+                visibility: hidden;
+                opacity: 0;
+            }
+            .video__start-btn._show {
+                visibility: visible;
+                opacity: 1;
+                z-index: 10;
+                pointer-events: none;
+            }
+            .video__file {
+                visibility: visible;
+                opacity: 1;
+            }
+        }
+
+        .video__poster {
+            position: absolute;
+            top: 0;
+            left: 0;
+            max-width: 100%;
+            width: 100%;            
+            height: 100%;
+            background: url('../img/intro-img.png') center / cover no-repeat;
+            transform: scale(1.35) translate(45px, -30px);
+            transition: all .4s ease 0s;
+            z-index: 0;
+
+            @media screen and (max-width: 1080px) {
+                transform: scale(1.1);
+            }
+        }
+        .video__start-btn {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100px;
+            height: 100px;
+            $videoStartBtnColor: $dark-grey;
+            $videoStartBtnColorHover: $orange;
+            box-shadow: inset 0 0 0 2px $videoStartBtnColor;
+            border-radius: 50%;
+            cursor: pointer;
+            $videoStartBtnTransition: all .2s ease 0s;
+            transition: $videoStartBtnTransition;
+
+            &:hover {
+                box-shadow: inset 0 0 0 2px $videoStartBtnColorHover;
+
+                &::before {
+                    border-left-color: $videoStartBtnColorHover;
+                }
+            }
+            
+            &::before {
+                content: '';
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(calc(-50% + 1.5px), -50%);
+                border-top: 13px solid transparent;
+                border-bottom: 13px solid transparent;
+                border-left: 18px solid $videoStartBtnColor;
+                transition: $videoStartBtnTransition;
+            }
+        }
+        .video__file {
+            visibility: hidden;
+            opacity: 0;
+            position: relative;
+            width: 100%;
+            transition: all .4s ease 0s;
+            $controlsColor: $orange;
+
+            video {
+                width: 100%;
+            }
+
+            &:hover {
+                box-shadow: inset 0 15px 15px 2px $black;
+
+                .video__togglePlay {
+                    visibility: visible;
+                    opacity: 1;
+                }
+            }
+            .video-btn {
+                position: absolute;
+                width: 35px;
+                height: 35px;
+                z-index: 1;
+                cursor: pointer;
+                transition: all .2s ease 0s;
+
+                &:hover {
+                    background-color: $dark-grey;
+                }
+            }
+            .video__close-btn {
+                top: 10px;
+                right: 10px;
+
+                .btn {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    width: 28px;
+                    height: 28px;
+
+                    &::before,
+                    &::after {
+                        content: '';
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        height: 6px;
+                        width: 100%;
+                        background-color: $controlsColor;
+                        border-radius: 100px;
+                    }
+                    &::before {
+                        transform: translate(-50%, -50%) rotate(45deg);
+                    }
+                    &::after {
+                        transform: translate(-50%, -50%) rotate(-45deg);
+                    }
+                }
+            }
+            .video__togglePlay {
+                bottom: 10px;
+                left: 10px;
+                visibility: hidden;
+                opacity: 0;
+
+                .btn {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    width: 20px;
+                    height: 20px;
+                    transition: all .2s ease 0s;
+                    border-left: 8px solid $controlsColor;
+                    border-right: 8px solid $controlsColor;
+                }
+                &._paused .btn {
+                    width: 0;
+                    height: 0;
+                    transform: translate(calc(-50% + 2px), -50%);
+                    border-left: 20px solid $controlsColor;
+                    border-top: 13px solid transparent;
+                    border-bottom: 13px solid transparent;
+                    border-right: none;
+                }
+            }
+            .video__fullscreen-btn {
+                position: absolute;
+                right: 10px;
+                bottom: 10px;
+
+                .btn {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    width: 22px;
+                    height: 22px;
+                    transform: translate(-50%, -50%);
+                    border: 2px solid $controlsColor;
+                }
+            }
+        }
+    }
+    &__form.form {
+        background-color: $dark-grey;
+        width: 420px;
+        min-width: 420px;
+        max-width: 420px;
+        padding: 56px 40px 34px;
+        color: $white;
+        position: relative;
+        z-index: 1;
+        margin-right: 50px;
+        margin-left: 30px;
+        
+        @media screen and (max-width: 1080px) {
+            width: 80%;
+            min-width: 0;
+            max-width: 80%;
+            margin: 0 20px 0;
+        }
+        @media screen and (max-width: 600px) {
+            width: 100%;
+            max-width: 100%;
+        }
+        @media screen and (max-width: $containerWidthSum) {
+            @include resp-property(padding-top, 56, 20, $size-containerWidth, $size-mobileWidth, 1, 1);
+            @include resp-property(padding-left, 40, 25, $size-containerWidth, $size-mobileWidth, 1, 1);
+            @include resp-property(padding-right, 40, 25, $size-containerWidth, $size-mobileWidth, 1, 1);
+            @include resp-property(padding-bottom, 34, 31, $size-containerWidth, $size-mobileWidth, 1, 1);
+        }
+
+        .form-input {
+            border-bottom: 1px solid $white;
+            background-color: transparent;
+            color: $white;
+            padding: 12px 0 11px;
+            width: 100%;
+            display: block;
+            font-size: 16px;
+
+            @media screen and (max-width: $containerWidthSum) {
+                @include resp-property(font-size, 16, 14, $size-containerWidth, $size-mobileWidth, 1, 1);
+            }
+
+            &::placeholder {
+                color: $white;
+                font-family: 'Open Sans', sans-serif;
+            }
+        }
+        .form__title {
+            font-size: 24px;
+            text-align: center;
+
+            @media screen and (max-width: $containerWidthSum) {
+                @include resp-property(font-size, 24, 20, $size-containerWidth, $size-mobileWidth, 1, 1);
+            }
+        }
+        .form__name-block {
+            margin-top: 28px;
+            display: flex;
+            column-gap: 40px;
+        }
+        // .form__first-name {
+        // }
+        // .form__last-name {
+        // }
+        .form__email-address {
+            margin-top: 25px;
+        }
+        .form__phone-number {
+            margin-top: 25px;
+        }
+        .form__requirement {
+            margin-top: 25px;
+            resize: none;
+            height: 130px;
+
+            &::-webkit-scrollbar-track,
+            &::-webkit-scrollbar-thumb {
+                border-bottom-left-radius: 0;
+                border-bottom-right-radius: 0;
+            }
+        }
+        .form__button {
+            margin-top: 30px;
+            background-color: transparent;
+            padding: 15px 23px;
+            color: $white;
+            cursor: pointer;
+            border: 1px solid $white;
+            border-radius: 4px;
+            transition: all .3s ease 0s;
+            font-size: 16px;
+
+            @media screen and (max-width: $containerWidthSum) {
+                @include resp-property(font-size, 16, 14, $size-containerWidth, $size-mobileWidth, 1, 1);
+            }
+
+            &:hover {
+                background-color: $white;
+                color: $black;
+            }
+        }
+    }
+}

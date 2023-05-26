@@ -1,0 +1,24 @@
+// Fonts
+
+// Sizes
+$size-containerWidth: 1260;
+$size-containerPaddingWidth: 20;
+$size-containerWidthSum: calc($size-containerWidth + ($size-containerPaddingWidth * 2));
+$size-mobileWidth: 430;
+$size-openBurgerWidth: 1250;
+
+// Breakpoints
+$containerWidth: #{$size-containerWidth}px; // Container width
+$containerPaddingWidth: #{$size-containerPaddingWidth}px; // Container padding
+$containerWidthSum: calc($containerWidth + ($containerPaddingWidth * 2)); // Container sum width
+$mobileWidth: #{$size-mobileWidth}px;
+$openBurgerWidth: #{$size-openBurgerWidth}px;
+
+// Colors
+$white: #fff;
+$black: #000;
+$orange: #EF5537;
+$dark-grey: #2A2A2A;
+$purple: #54387F;
+
+// Other

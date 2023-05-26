@@ -1,0 +1,85 @@
+.ready-to-start {
+    position: relative;
+
+    &__bg {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 0;
+        width: 1440px;
+        height: 278px;
+        background: url('../img/footer-topBg.png') bottom / contain no-repeat;
+
+        &::before,
+        &::after  {
+            content: '';
+            position: absolute;
+            top: 0;
+            width: 250px;
+            height: 100%;
+            z-index: 2;
+            
+            @media screen and (max-width: 1440px) {
+                display: none;
+            }
+        }
+        &::before {
+            left: 0;
+            box-shadow: inset 180px 0 100px -90px $white;
+        }
+        &::after {
+            right: 0;
+            box-shadow: inset -180px 0 100px -90px $white;
+        }
+    }
+
+    ._container {
+        position: relative;
+        z-index: 1;
+    }
+
+    &__title {
+        margin-top: 65px;
+        font-weight: 600;
+        text-align: center;
+        font-size: 36px;
+
+        @media screen and (max-width: $containerWidthSum) {
+            @include resp-property(font-size, 36, 18, $size-containerWidth, $size-mobileWidth, 1, 1);
+        }
+    }
+    &__btn {
+        margin-top: 22px;
+        padding-bottom: 127px;
+        display: flex;
+        justify-content: center;
+
+        @media screen and (max-width: $containerWidthSum) {
+            @include resp-property(padding-bottom, 127, 142, $size-containerWidth, $size-mobileWidth, 1, 1);
+        }
+
+        button {
+            font-weight: 700;
+            font-size: 17px;
+            padding: 12px 30px 14px;
+            cursor: pointer;
+            border-radius: 5px;
+            background-color: $orange;
+            color: $white;
+            transition: all .3s ease 0s;
+
+            @media screen and (max-width: $containerWidthSum) {
+                @include resp-property(padding-top, 12, 11, $size-containerWidth, $size-mobileWidth, 1, 1);
+                @include resp-property(padding-bottom, 14, 10, $size-containerWidth, $size-mobileWidth, 1, 1);
+                @include resp-property(padding-left, 30, 21, $size-containerWidth, $size-mobileWidth, 1, 1);
+                @include resp-property(padding-right, 30, 21, $size-containerWidth, $size-mobileWidth, 1, 1);
+            }
+
+            &:hover {
+                color: $black;
+                background-color: $white;
+                box-shadow: inset 0 0 0 1px $black;
+            }
+        }
+    }
+}

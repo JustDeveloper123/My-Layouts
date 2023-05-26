@@ -1,0 +1,33 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:regular,600,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:regular,700&display=swap');
+
+// Variables
+@import 'variables';
+
+// Mixins
+@import 'mixins';
+
+// Null style
+@import 'null-style';
+
+// Global properties
+@import 'global';
+
+
+
+// Body
+@import 'header';
+.main {
+    flex: 1 1 auto;
+
+    @import 'intro';
+    @import 'our-clients';
+    @import 'portfolio';
+    @import 'about-us';
+    @import 'why-us';
+    @import 'types-of-videos';
+    @import 'our-customer';
+    @import 'ready-to-start';
+}
+@import 'footer';

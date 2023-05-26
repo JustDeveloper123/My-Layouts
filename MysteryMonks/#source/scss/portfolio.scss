@@ -1,0 +1,193 @@
+.portfolio {
+    padding-top: 30px;
+    padding-bottom: 63px;
+
+    @media screen and (max-width: $containerWidthSum) {
+        @include resp-property(padding-bottom, 63, 30, $size-containerWidth, $size-mobileWidth, 1, 1);
+    }
+
+    // ._container {
+    // }
+    // &__title {
+    // }
+    &__subtitle {
+        margin-top: 8px;
+
+        @media screen and (max-width: $containerWidthSum) {
+            @include resp-property(margin-top, 8, 5, $size-containerWidth, $size-mobileWidth, 1, 1);
+        }
+    }
+
+    .portfolio__tabs.tabs {
+        .tabs__nav {
+            padding: 45px 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 24px;
+            flex-wrap: wrap;
+
+            @media screen and (max-width: $containerWidthSum) {
+                @include resp-property(padding-top, 45, 25, $size-containerWidth, $size-mobileWidth, 1, 1);
+                @include resp-property(padding-bottom, 45, 25, $size-containerWidth, $size-mobileWidth, 1, 1);
+                @include resp-property(gap, 24, 12, $size-containerWidth, $size-mobileWidth, 1, 0);
+            }
+
+            li button {
+                cursor: pointer;
+                font-size: 20px;
+                color: #6A6A6A;
+                font-weight: 600;
+                background-color: transparent;
+                transition: all .2s ease 0s;
+
+                @media screen and (max-width: $containerWidthSum) {
+                    @include resp-property(font-size, 20, 16, $size-containerWidth, $size-mobileWidth, 1, 1);
+                }
+
+                span {
+                    padding: 0 2px 6px;
+                    position: relative;
+                    transition: all .3s ease 0s;
+
+                    &::before {
+                        transition: all .4s ease 0s;
+                        content: '';
+                        position: absolute;
+                        left: 0;
+                        bottom: 0;
+                        width: 100%;
+                        height: 2px;
+                        border-radius: 50px;
+                        background-color: $purple;
+                        opacity: 0;
+                    }
+                }
+                &._active-tab-btn {
+                    transform: scale(1.05);
+                    color: $purple;
+                    
+                    span {
+                        &::before {
+                            opacity: 1;
+                        } 
+                    }
+                }
+            }
+        }
+    }
+    .tabs__content {
+        .item-1 {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            column-gap: 5px;
+            row-gap: 8px;
+        }
+
+        ._error-tab {
+            text-align: center;
+            padding: 50px 0;
+            font-size: 30px;
+            font-weight: 700;
+            letter-spacing: 1px;
+
+            @media screen and (max-width: $containerWidthSum) {
+                @include resp-property(font-size, 30, 22, $size-containerWidth, $size-mobileWidth, 1, 1);
+            }
+        }
+
+        .tabs__item {
+            display: none;
+            overflow: hidden;
+            
+            &._active-tab {
+                display: block;
+            }
+            
+            .item__block {
+                position: relative;
+                aspect-ratio: 16 / 9;
+
+                @media screen and (max-width: 600px) {
+                    &._disabled-breakpoint {
+                        display: none;
+                    }
+                }
+
+                &:hover {
+                    &::before {
+                        opacity: 1;
+                    }
+                }
+    
+                &::before {
+                    content: '';
+                    position: absolute;
+                    left: 0;
+                    bottom: 0;
+                    width: 100%;
+                    height: 70%;
+                    background: linear-gradient(180deg, rgba(35, 35, 35, 0) 0%, rgba(35, 35, 35, 1) 100%);
+                    opacity: .8;
+                    z-index: 1;
+                    transition: all .4s ease 0s;
+                }
+    
+                .item__img {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+    
+                    img {
+                        max-width: 100%;
+                        object-fit: cover;
+                    }
+                }
+                .item__content {
+                    position: relative;
+                    z-index: 2;
+                    display: flex;
+                    align-items: flex-end;
+                    height: 100%;
+    
+                    .fixed-height {
+                        padding: 37px 30px;
+    
+                        @media screen and (max-width: $containerWidthSum) {
+                            @include resp-property(padding-top, 37, 8, $size-containerWidth, 700, 1, 1);
+                            @include resp-property(padding-bottom, 37, 19, $size-containerWidth, 700, 1, 1);
+                            @include resp-property(padding-left, 30, 13, $size-containerWidth, 700, 1, 1);
+                            @include resp-property(padding-right, 30, 13, $size-containerWidth, 700, 1, 1);
+                        }
+                    }
+                    
+                    .item__duration {
+                        font-size: 14px;
+                        font-weight: 700;
+                        color: $white;
+    
+                        @media screen and (max-width: 600px) {
+                            display: none;
+                        }
+    
+                        .duration-time {
+                            font-weight: 400;
+                        }
+                    }
+                    .item__text {
+                        margin-top: 17px;
+                        font-size: 16px;
+                        color: $white;
+    
+                        @media screen and (max-width: $containerWidthSum) {
+                            @include resp-property(margin-top, 17, 10, $size-containerWidth, 600, 1, 0);
+                            @include resp-property(font-size, 16, 13, $size-containerWidth, 600, 1, 1);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

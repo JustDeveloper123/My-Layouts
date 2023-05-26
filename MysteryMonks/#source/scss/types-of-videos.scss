@@ -1,0 +1,240 @@
+.types-of-videos {
+    background-color: #f0f0f0;
+    padding-top: 90px;
+    padding-bottom: 82px;
+
+    @media screen and (max-width: $containerWidthSum) {
+        @include resp-property(padding-top, 90, 20, $size-containerWidth, $size-mobileWidth, 1, 1);
+        @include resp-property(padding-bottom, 82, 50, $size-containerWidth, $size-mobileWidth, 1, 1);
+    }
+
+    // ._container {
+    // }
+    // &__title {
+    // }
+    &__block {
+        margin-top: 60px;
+        display: flex;
+        flex-direction: column;
+        row-gap: 100px;
+
+        @media screen and (max-width: $containerWidthSum) {
+            @include resp-property(margin-top, 60, 40, $size-containerWidth, $size-mobileWidth, 1, 1);
+        }
+    }
+    &__row.row  {
+        display: flex;
+        column-gap: 81px;
+
+        &.row-ltr { flex-direction: row; }
+        &.row-rtl { flex-direction: row-reverse; }
+
+        @media screen and (max-width: 1050px) {
+            &.row-ltr { flex-direction: column-reverse; }
+            &.row-rtl { flex-direction: column-reverse; }
+        }
+
+        .row__content {
+            flex-basis: 45%;
+
+            @media screen and (max-width: 1050px) {
+                flex-basis: 100%;
+                margin-top: 40px;
+            }
+
+            .row__title {
+                font-weight: 600;
+                font-size: 40px;
+
+                @media screen and (max-width: $containerWidthSum) {
+                    @include resp-property(font-size, 40, 20, $size-containerWidth, $size-mobileWidth, 1, 1);
+                }
+            }
+            .row__text {
+                margin-top: 15px;
+                font-size: 18px;
+                color: $dark-grey;
+                letter-spacing: -0.34px;
+                line-height: 27px;
+
+                @media screen and (max-width: $containerWidthSum) {
+                    @include resp-property(font-size, 18, 14, $size-containerWidth, $size-mobileWidth, 1, 1);
+                    @include resp-property(margin-top, 15, 12.7, $size-containerWidth, $size-mobileWidth, 1, 1);
+                }
+            }
+            .row__btn {
+                margin-top: 15px;
+
+                @media screen and (max-width: $containerWidthSum) {
+                    @include resp-property(margin-top, 15, 25, $size-containerWidth, $size-mobileWidth, 1, 1);
+                }
+
+                button {
+                    font-family: 'Montserrat', sans-serif;
+                    padding: 10px;
+                    background-color: $orange;
+                    font-size: 16px;
+                    color: $white;
+                    border-radius: 8px;
+                    cursor: pointer;
+                    transition: all .3s ease 0s;
+
+                    &:hover {
+                        filter: brightness(1.2);
+                        box-shadow: 0 0 15px 0 $orange;
+                    }
+                }
+            }
+        }
+        .row__video.video {
+            flex-basis: 55%;
+            position: relative;
+            border-radius: 16px;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            aspect-ratio: 16 / 9 ;
+
+            @media screen and (max-width: 1050px) {
+                flex-basis: 100%;
+                width: 605px;
+                margin: 0 auto;
+
+                @include resp-property(width, 605, 340, 1050, 650, 1, 0);
+            }
+            @media screen and (max-width: 650px) {
+                width: 100%;
+            }
+
+            &:hover {
+                .video__start-btn {
+                    filter: brightness(1.2);
+                    box-shadow: 0 0 15px 2px $orange;
+                }
+            }
+            
+            &._active-video {
+                cursor: default;
+
+                .video__start-btn,
+                .video__poster  {
+                    visibility: hidden;
+                    opacity: 0;
+                }
+                .video-btn {
+                    visibility: visible;
+                    opacity: 1;
+                }
+                video {
+                    visibility: visible;
+                    opacity: 1;
+                }
+            }
+            video {
+                width: 100%;
+                border-radius: 16px;
+                visibility: hidden;
+                opacity: 0;
+            }
+            .video__start-btn {
+                position: absolute;
+                top: 50%; 
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: 70px;
+                height: 70px;
+                border-radius: 50%;
+                background-color: $orange;
+                z-index: 1;
+                transition: all .4s ease 0s;
+
+                @media screen and (max-width: $containerWidthSum) {
+                    @include resp-property(width, 70, 35, $size-containerWidth, $size-mobileWidth, 1, 0);
+                    @include resp-property(height, 70, 35, $size-containerWidth, $size-mobileWidth, 1, 0);
+                }
+
+                &::before {
+                    content: '';
+                    position: absolute;
+                    top: 50%; 
+                    left: 50%;
+                    transform: translate(calc(-50% + 1px), -50%);
+                    border-left: 17px solid $white;
+                    border-top: 11px solid transparent;
+                    border-bottom: 11px solid transparent;
+                    transition: all .4s ease 0s;
+
+                    @media screen and (max-width: $containerWidthSum) {
+                        @include resp-property(border-left-width, 17, 11, $size-containerWidth, $size-mobileWidth, 1, 0);
+                        @include resp-property(border-top-width, 11, 5, $size-containerWidth, $size-mobileWidth, 1, 0);
+                        @include resp-property(border-bottom-width, 11, 5, $size-containerWidth, $size-mobileWidth, 1, 0);
+                    }
+                }
+            }
+            .video__poster {
+                position: absolute;
+                top: 0; left: 0;
+                width: 100%;
+                height: 100%;
+                border-radius: 16px;
+                max-width: 100%;
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center;
+                transition: all .4s ease 0s;
+
+                &.poster-1 { background-image: url('../img/types-of-videos-1.jpg'); }
+                &.poster-2 { background-image: url('../img/types-of-videos-2.png'); }
+                &.poster-3 { background-image: url('../img/types-of-videos-3.jpg'); }
+                &.poster-4 { background-image: url('../img/types-of-videos-4.jpg'); }
+            }
+            .video-btn {
+                visibility: hidden;
+                opacity: 0;
+                position: absolute;
+                width: 35px;
+                height: 35px;
+                z-index: 1;
+                cursor: pointer;
+                transition: all .2s ease 0s;
+
+                &:hover {
+                    background-color: $dark-grey;
+                }
+            }
+            .video__close-btn {
+                top: 10px;
+                right: 10px;
+                z-index: 5;
+
+                .btn {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    width: 28px;
+                    height: 28px;
+
+                    &::before,
+                    &::after {
+                        content: '';
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        height: 6px;
+                        width: 100%;
+                        background-color: $orange;
+                        border-radius: 100px;
+                    }
+                    &::before {
+                        transform: translate(-50%, -50%) rotate(45deg);
+                    }
+                    &::after {
+                        transform: translate(-50%, -50%) rotate(-45deg);
+                    }
+                }
+            }
+        }
+    }
+}
