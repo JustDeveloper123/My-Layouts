@@ -126,12 +126,15 @@
         .footer__contact-us.contact-us {
             flex: 10%;
 
+            @media screen and (max-width: 850px) {
+                margin-top: 27px;
+            }
+
             .contact-us__title {
                 font-size: 18px;
 
                 @media screen and (max-width: 600px) {
                     font-weight: 700;
-                    margin-top: 47px;
                 }
                 @media screen and (max-width: $containerWidthSum) {
                     @include resp-property(font-size, 18, 20, $size-containerWidth, $size-mobileWidth, 1, 0);
@@ -205,8 +208,9 @@
         padding-left: 10px;
         padding-right: 10px;
 
-        @media screen and (max-width: 600px) {
+        @media screen and (max-width: 660px) {
             flex-direction: column;
+            align-items: flex-end;
             gap: 10px;
             padding-left: 0;
             padding-right: 0;
@@ -217,14 +221,14 @@
             font-size: 14px;
         }
         .copy__text {
-            @media screen and (max-width: 600px) {
+            @media screen and (max-width: 800px) {
                 display: none;
             }
         }
         .copy__text-mobile {
             display: none;
 
-            @media screen and (max-width: 600px) {
+            @media screen and (max-width: 800px) {
                 display: block;
             }
         }

@@ -122,9 +122,9 @@
             font-size: 24px;
             transition: background-color .3s ease 0s;
 
-            @include resp-property(padding-top, 15, 10, $size-openBurgerWidth, $size-mobileWidth, 1, 1);
-            @include resp-property(padding-bottom, 15, 10, $size-openBurgerWidth, $size-mobileWidth, 1, 1);
-            @include resp-property(padding-left, 30, 20, $size-openBurgerWidth, $size-mobileWidth, 1, 1);
+            @include resp-property(padding-top, 15, 13, $size-openBurgerWidth, $size-mobileWidth, 1, 0);
+            @include resp-property(padding-bottom, 15, 13, $size-openBurgerWidth, $size-mobileWidth, 1, 0);
+            @include resp-property(padding-left, 30, 20, $size-openBurgerWidth, $size-mobileWidth, 1, 0);
             @include resp-property(padding-right, 65, 75, $size-openBurgerWidth, $size-mobileWidth, 1, 1);
             @include resp-property(font-size, 24, 18, $size-openBurgerWidth, $size-mobileWidth, 1, 1);
 

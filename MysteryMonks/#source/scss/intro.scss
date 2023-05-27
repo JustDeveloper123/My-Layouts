@@ -104,6 +104,10 @@
             video {
                 object-fit: contain;
                 margin: -70px 0;
+                @media screen and (max-width: $containerWidthSum) {
+                    @include resp-property(margin-top, -70, -10, $size-containerWidth, $size-mobileWidth, 1, 1);
+                    @include resp-property(margin-bottom, -70, -10, $size-containerWidth, $size-mobileWidth, 1, 1);
+                }
             }
         }
         
@@ -156,6 +160,11 @@
             $videoStartBtnTransition: all .2s ease 0s;
             transition: $videoStartBtnTransition;
 
+            @media screen and (max-width: $containerWidthSum) {
+                @include resp-property(width, 100, 50, $size-containerWidth, $size-mobileWidth, 1, 1);
+                @include resp-property(height, 100, 50, $size-containerWidth, $size-mobileWidth, 1, 1);
+            }
+
             &:hover {
                 box-shadow: inset 0 0 0 2px $videoStartBtnColorHover;
 
@@ -174,6 +183,12 @@
                 border-bottom: 13px solid transparent;
                 border-left: 18px solid $videoStartBtnColor;
                 transition: $videoStartBtnTransition;
+
+                @media screen and (max-width: $containerWidthSum) {
+                    @include resp-property(border-top-width, 13, 8, $size-containerWidth, $size-mobileWidth, 1, 1);
+                    @include resp-property(border-bottom-width, 13, 8, $size-containerWidth, $size-mobileWidth, 1, 1);
+                    @include resp-property(border-left-width, 18, 13, $size-containerWidth, $size-mobileWidth, 1, 1);
+                }
             }
         }
         .video__file {
