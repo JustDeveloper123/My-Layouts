@@ -1,0 +1,190 @@
+.main-title {
+    position: relative;
+    background-color: $almost-black;
+
+    &__bg {
+        position: absolute;
+        top: 0; left: 0;
+        width: 100%;
+        height: 100%;
+        background: url('../img/main-title__bg.jpg') right bottom / cover no-repeat;
+        z-index: 0;
+        
+        @media (max-width: 1111px) {
+            background: url('../img/main-title__bg-short.jpg') right bottom / cover no-repeat;
+        }
+    }
+    &__bg-starmax {
+        position: absolute;
+        bottom: -10px; right: -40px;
+        width: 294px;
+        height: 362px;
+        transform: scale(2);
+        z-index: 0;
+        @media (max-width: 1111px) {
+            background: url('../img/content/intro-starmax-bg.png') center / contain no-repeat;
+        }
+    }
+    &__container {
+        padding-top: 223px;
+        padding-bottom: 40px;
+        position: relative;
+
+        @media (max-width: $cont-w) {
+            @include resp-property(padding-top, 223, 89, $size-mobile, 1);
+        }
+        @media (max-width: 500px) {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .main-title__title.title {
+            font-family: $font-Ethnocentric, sans-serif;
+            font-size: 115px;
+            color: $white;
+            letter-spacing: -0.02em;
+            position: relative;
+            z-index: 1;
+            cursor: text;
+            display: inline-block;
+
+            @media (max-width: $cont-w) {
+                @include resp-property(font-size, 115, 41, $size-mobile, 1);
+            }
+            span {
+                position: absolute;
+                color: transparent;
+                -webkit-text-stroke-width: 1px;
+                user-select: none;
+                z-index: -1;
+                cursor: default;
+                
+                &.title__shadow-1 {
+                    top: -20px; left: 0;
+                    -webkit-text-stroke-color: rgba(255, 255, 255, 0.12);
+                    @media (max-width: $cont-w) {
+                        @include resp-property(top, -20, -7, $size-mobile, 1);
+                    }
+                }
+                &.title__shadow-2 {
+                    top: -40px; left: 0;
+                    -webkit-text-stroke-color: rgba(255, 255, 255, 0.06);
+                    @media (max-width: $cont-w) {
+                        @include resp-property(top, -40, -14, $size-mobile, 1);
+                    }
+                }
+                &.title__shadow-3 {
+                    top: -60px; left: 0;
+                    -webkit-text-stroke-color: rgba(255, 255, 255, 0.03);
+                    @media (max-width: $cont-w) {
+                        @include resp-property(top, -60, -21, $size-mobile, 1);
+                    }
+                }
+            }
+        }
+        .main-title__text.default-text {
+            margin-top: 36px;
+            max-width: 492px;
+            color: rgba(255, 255, 255, .75);
+            position: relative;
+            z-index: 1;
+
+            @media (max-width: $cont-w) {
+                @include resp-property(margin-top, 36, 20, $size-mobile, 1);
+            }
+            @media (max-width: 500px) {
+                text-align: center;
+            }
+        }
+        .main-title__buy {
+            margin-top: 53.5px;
+            display: flex;
+            column-gap: 43px;
+            row-gap: 20px;
+            align-items: center;
+            flex-wrap: wrap;
+            position: relative;
+            z-index: 1;
+
+            @media (max-width: $cont-w) {
+                @include resp-property(margin-top, 53.5, 29, $size-mobile, 1);
+                @include resp-property(column-gap, 43, 20, $size-mobile, 1);
+            }
+            @media (max-width: 500px) {
+                justify-content: center;
+            }
+            .main-title__price {
+                font-size: 50px;
+                white-space: nowrap;
+
+                @media (max-width: $cont-w) {
+                    @include resp-property(font-size, 50, 30, $size-mobile, 1);
+                }
+            }
+            .main-title__btn {        
+                a {
+                    padding: 18px 70px;
+                    font-size: 20px;
+                    
+                    @media (max-width: $cont-w) {
+                        @include resp-property(padding-top, 18, 15, $size-mobile, 1);
+                        @include resp-property(padding-bottom, 18, 15, $size-mobile, 1);
+                        @include resp-property(padding-left, 70, 32, $size-mobile, 1);
+                        @include resp-property(padding-right, 70, 32, $size-mobile, 1);
+                        @include resp-property(font-size, 20, 17, $size-mobile, 1);
+                    }
+                }
+            }
+        }
+        .main-title__learn-more.learn-more {
+            margin-top: 240px;
+            display: flex;
+            justify-content: center;
+
+            @media (max-width: $cont-w) {
+                @include resp-property(margin-top, 240, 233, $size-mobile, 1);
+            }
+            .learn-more__link {
+                display: inline-flex;
+                flex-direction: column;
+                gap: 9px;
+                align-items: center;
+
+                .learn-more__text {
+                    font-size: 12px;
+                    color: $white;
+                    letter-spacing: 0.085em;
+                    transition: all .3s ease 0s;
+                    @include resp-property(font-size, 12, 10, $size-mobile, 1);
+                }
+                .learn-more__icon {
+                    fill: $white;
+                    width: 34px;
+                    height: 15px;
+                    transition: all .3s ease 0s;
+                    @include resp-property(width, 34, 26, $size-mobile, 1);
+                    @include resp-property(height, 15, 12, $size-mobile, 1);
+                }
+                &:hover {
+                    .learn-more__text {
+                        color: $light-blue;
+                    }
+                    .learn-more__icon {
+                        fill: $light-blue;
+                    }
+                }
+                &:active,
+                &:focus {
+                    .learn-more__text {
+                        color: $aqua;
+                        transition: all .1s ease 0s;
+                    }
+                    .learn-more__icon {
+                        fill: $aqua;
+                        transition: all .1s ease 0s;
+                    }
+                }
+            }
+        }
+    }
+}

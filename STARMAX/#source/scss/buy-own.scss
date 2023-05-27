@@ -1,0 +1,73 @@
+.buy-own {
+    background-color: $almost-black;
+    position: relative;
+    
+    &::before {
+        content: '';
+        position: absolute;
+        bottom: 0; right: 0;
+        background: url('../img/content/buy-starmax.png') bottom right / contain no-repeat;
+        height: 100%;
+        width: 612px;
+
+        @media (max-width: $cont-w) {
+            @include resp-property(width, 612, 400, $size-mobile, 1);
+        }
+    }
+    &__container {
+        padding-top: 191px;
+        padding-bottom: 133px;
+        position: relative;
+
+        @media (max-width: $cont-w) {
+            @include resp-property(padding-top, 191, 30, $size-mobile, 1);
+        }
+        @media (max-width: 1000px) {
+            @include resp-property(padding-bottom, 180, 297, $size-mobile, 1);
+        }
+        @media (max-width: 750px) {
+            padding-bottom: 297px;
+        }
+        .buy-own__content {
+            max-width: 519px;
+            position: relative;
+            z-index: 1;
+
+            // .buy-own__title {}
+            .buy-own__text {
+                margin-top: 30px;
+                color: rgba(255, 255, 255, .75);
+            }
+            .buy-own__buy {
+                margin-top: 30px;
+                display: flex;
+                column-gap: 30px;
+                align-items: center;
+
+                @media (max-width: 500px) {
+                    justify-content: center;
+                    @include resp-property(column-gap, 30, 20, $size-mobile, 1);
+                }
+                .buy-own__price {
+                    font-size: 30px;
+
+                    @media (max-width: $cont-w) {
+                        @include resp-property(font-size, 30, 20, $size-mobile, 1);
+                    }
+                }
+                .buy-own__btn {
+                    a {
+                        padding: 15px 60px;
+                        font-size: 18px;
+
+                        @media (max-width: $cont-w) {
+                            @include resp-property(padding-left, 60, 49, $size-mobile, 1);
+                            @include resp-property(padding-right, 60, 49, $size-mobile, 1);
+                            @include resp-property(font-size, 20, 16, $size-mobile, 1);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

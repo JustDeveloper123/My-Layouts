@@ -1,0 +1,46 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,700&display=swap');
+@font-face {
+	font-family: 'Ethnocentric';
+	font-display: block;
+	src: url("../fonts/ethnocentric.ttf");
+	font-weight: normal;
+	font-style: normal;
+}
+
+
+
+// Variables
+@import 'variables';
+
+
+
+// Mixins
+@import 'mixins';
+
+
+
+// Null style
+@import 'null-style';
+
+
+
+// Global properties
+@import 'global';
+
+
+
+// Body
+@import 'go-to';
+.main {
+    flex: 1 1 auto;
+    
+    @import 'main-title';
+    @import 'vid-review';
+    @import 'why-us';
+    @import 'buy-own';
+    @import 'gallery';
+}
+@import 'footer';
+
+@import 'buy-product-modal';

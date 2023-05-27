@@ -1,0 +1,64 @@
+<div class="buy-product-modal modal">
+    <div class="modal__content">
+        <svg class="modal__close">
+            <use xlink:href="svg/sprites.svg#close-icon"></use>
+        </svg>
+        <h2 class="modal__title default-title">Придбати Starmax</h2>
+        <form class="modal__form form">
+            <p class="form__text default-text">
+                Заповніть коротку форму, щоб придбати Starmax
+            </p>
+            
+            <input type="text" class="form__input-first-name default-input" placeholder="Ім’я">
+            <input type="text" class="form__input-last-name default-input" placeholder="Прізвище">
+            <input type="num" class="form__input-tel-num default-input" placeholder="Номер телефону">
+
+
+            <p class="form__delivery-text default-text">Спосіб доставки</p>
+
+            <div class="form__delivery delivery default-radio">
+                <div class="delivery-item default-radio__item">
+                    <div class="delivery-btn default-radio__btn">
+                        <input id="delivery__nova-poshta" type="radio" name="choice-of-delivery" value="nova-poshta">
+                        <label for="delivery__nova-poshta"></label>
+                    </div>
+                    <div class="delivery__label default-radio__label">Нова Пошта</div>
+                </div>
+                <div class="delivery-item default-radio__item">
+                    <div class="delivery-btn default-radio__btn">
+                        <input id="delivery__in-kyiv" type="radio" name="choice-of-delivery" value="delivery__in-kyiv">
+                        <label for="delivery__in-kyiv"></label>
+                    </div>
+                    <div class="delivery__label default-radio__label">Доставка по Києву</div>
+                </div>
+            </div>
+
+
+            <div class="form__input-department default-select">
+                <input type="text" class="select__input" placeholder="Відділення">
+                <div class="select">
+                    <div class="select__label">
+                        <div class="select__title">Відділення</div>
+                        <div class="select__btn _icon-arrow-down">
+                            <svg>
+                                <use xlink:href="svg/sprites.svg#default-arrow1"></use>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="select__options">
+                        <div class="select__option">Відділення №1, вулиця Lorem ipsum dolor sit amet consectetur</div>
+                        <div class="select__option">Відділення №2, вулиця Lorem ipsum dolor sit amet</div>
+                        <div class="select__option">Відділення №3, вулиця Lorem ipsum dolor sit amet consectetur, adipisicing elit</div>
+                        <div class="select__option">Відділення №4, Lorem, ipsum dolor</div>
+                        <div class="select__option">Відділення №5, Lorem ipsum dolor sit amet consectetur adipisicing elit. Id magni possimus, sed accusamus quasi ea.</div>
+                    </div>
+                </div>
+            </div>
+
+
+            <button class="form__btn default-btn-light-blue">
+                <a href="##">Придбати</a>
+            </button>
+        </form>
+    </div>
+</div>

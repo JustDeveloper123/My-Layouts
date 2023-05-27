@@ -1,0 +1,18 @@
+// Responsive property
+@mixin resp-property($property, $startValue, $minValue, $breakPoint, $type) {
+    #{$property}: $startValue + px; 
+
+    @if($type == 1) {
+        @media(max-width: $cont-w) {
+            #{$property}: calc((#{$minValue + px}) + ($startValue - $minValue) * 
+                ((100vw - #{$breakPoint + px}) / ($size-cont - $breakPoint)));
+        }
+    }
+    @else {
+        @media(min-width: #{1920 + px}) {
+            #{$property}: calc((#{$minValue + px}) + ($startValue - $minValue) * 
+                ((100vw - #{$breakPoint + px}) / (1920 - $breakPoint)));
+        }
+    }
+}
+

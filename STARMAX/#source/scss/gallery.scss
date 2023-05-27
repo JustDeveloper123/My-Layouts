@@ -1,0 +1,75 @@
+.gallery {
+    background-color: $almost-black;
+
+    &__container {
+        padding-top: 50px;
+        padding-bottom: 50px;
+        position: relative;
+        
+        @media (max-width: $cont-w) {
+            @include resp-property(padding-top, 50, 48, $size-mobile, 1);
+            @include resp-property(padding-bottom, 50, 30, $size-mobile, 1);
+        }
+        &::before,
+        &::after {
+            content: '';
+            position: absolute;
+            width: 100vw;
+            border-radius: 100px;
+        }
+        &::before {
+            top: 0; bottom: auto;
+            background-color: rgba(255, 255, 255, 0.08);
+            height: 1px;
+        }
+        &::after {
+            top: auto; bottom: calc(0px + 50px);
+            background-color: #242424;
+            height: 2px;
+
+            @media (max-width: $cont-w) {
+                @include resp-property(bottom, 50, 30, $size-mobile, 1);
+            }
+        }
+        .gallery__items {
+            padding-bottom: 36px;
+            display: grid;
+            grid-auto-flow: column;
+            column-gap: 49px;
+            overflow: auto;
+            position: relative;
+            z-index: 1;
+            cursor: grab;
+
+            @media (max-width: $cont-w) {
+                @include resp-property(column-gap, 49, 41, $size-mobile, 1);
+                @include resp-property(padding-bottom, 36, 23, $size-mobile, 1);
+            }
+            .gallery__item.item {
+                .item__img {
+                    object-fit: contain;
+                    border-radius: 4px;
+                    max-height: 230px;
+
+                    @media (max-width: $cont-w) {
+                        @include resp-property(max-height, 230, 133, $size-mobile, 1);
+                    }
+                }
+            }
+            &:active {
+                cursor: grabbing;
+            }
+            &::-webkit-scrollbar {
+                height: 2px;
+            }
+            &::-webkit-scrollbar-track {
+                background: #242424;
+                border-radius: 100px;
+            }
+            &::-webkit-scrollbar-thumb {
+                background: $white;
+                border-radius: 100px;
+            }
+        }
+    }
+}

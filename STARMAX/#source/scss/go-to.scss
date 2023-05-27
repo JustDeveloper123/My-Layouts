@@ -1,0 +1,42 @@
+.go-to {
+    position: fixed;
+    --go-to__left: -36.5px;
+    top: 50%; left: calc(var(--go-to__left) * 2);
+    transform: translateY(-50%) rotate(90deg);
+    z-index: 10;
+
+    @media (max-width: 1300px) {
+        display: none;
+    }
+    ul {
+        display: flex;
+        justify-content: space-between;
+        width: 236px;
+
+        li a {
+            font-size: 1.125rem;
+            color: rgba(255, 255, 255, 0.39);
+            cursor: pointer;
+            transition: all .3s ease 0s;
+            user-select: none;  
+            height: 40px;
+            width: 27px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            &:hover {
+                color: rgba(255, 255, 255, 0.94);
+            }
+            &:active {
+                color: $light-blue;
+                font-size: 1.1875rem;
+            }
+            &._select {
+                font-weight: 700;
+                font-size: 1.5625rem;
+                color: $white;
+            }
+        }
+    }
+}

@@ -1,0 +1,24 @@
+// Fonts
+$font-Open-Sans: 'Open+Sans';
+$font-Ethnocentric: 'Ethnocentric';
+
+// Container
+$cont-w: 1110px;
+$cont-x-p: 20px;
+$cont-w-sum: var($cont-w + ($cont-x-p * 2));
+
+// Colors
+$white: #fff;
+$black: #000;
+$light-blue: #9DFFF3;
+$aqua: #50FFEA;
+$almost-black: #161616;
+
+// Other
+$color-main-bg: $almost-black;
+$main-letter-spacing: 0.125rem;
+
+// Sizes
+$size-cont: 1110;
+$size-mobile: 320;
+$size-cont-x-p: 20;
