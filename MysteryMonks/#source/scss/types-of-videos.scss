@@ -4,7 +4,7 @@
     padding-bottom: 82px;
 
     @media screen and (max-width: $containerWidthSum) {
-        @include resp-property(padding-top, 90, 20, $size-containerWidth, $size-mobileWidth, 1, 1);
+        @include resp-property(padding-top, 90, 40, $size-containerWidth, $size-mobileWidth, 1, 1);
         @include resp-property(padding-bottom, 82, 50, $size-containerWidth, $size-mobileWidth, 1, 1);
     }
 
@@ -20,6 +20,7 @@
 
         @media screen and (max-width: $containerWidthSum) {
             @include resp-property(margin-top, 60, 40, $size-containerWidth, $size-mobileWidth, 1, 1);
+            @include resp-property(row-gap, 100, 40, $size-containerWidth, $size-mobileWidth, 1, 1);
         }
     }
     &__row.row  {

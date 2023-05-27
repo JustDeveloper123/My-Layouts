@@ -1717,7 +1717,7 @@ body._scroll-lock {
 }
 @media screen and (max-width: calc(1260px + 20px * 2)) and (max-width: 1260px) {
   .main .types-of-videos {
-    padding-top: calc((20px) + 70 * (100vw - 430px) / 830);
+    padding-top: calc((40px) + 50 * (100vw - 430px) / 830);
   }
 }
 @media screen and (max-width: calc(1260px + 20px * 2)) and (max-width: 1260px) {
@@ -1739,11 +1739,17 @@ body._scroll-lock {
 @media screen and (max-width: calc(1260px + 20px * 2)) {
   .main .types-of-videos__block {
     margin-top: 60px;
+    row-gap: 100px;
   }
 }
 @media screen and (max-width: calc(1260px + 20px * 2)) and (max-width: 1260px) {
   .main .types-of-videos__block {
     margin-top: calc((40px) + 20 * (100vw - 430px) / 830);
+  }
+}
+@media screen and (max-width: calc(1260px + 20px * 2)) and (max-width: 1260px) {
+  .main .types-of-videos__block {
+    row-gap: calc((40px) + 60 * (100vw - 430px) / 830);
   }
 }
 .main .types-of-videos__row.row {

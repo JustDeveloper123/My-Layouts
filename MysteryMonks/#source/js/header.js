@@ -100,5 +100,6 @@ for (let link of links) {
             behavior: 'smooth',
             block: 'start',
         });
+        closeBurger();
     });
 }
