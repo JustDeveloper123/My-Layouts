@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Federo&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Potta+One&display=swap');
+
+@import '/src/assets/components/styles/_variables.scss'; // Змінні
+@import '/src/assets/components/styles/_mixins.scss'; // Міксини
+@import '/src/assets/components/styles/_null-styles.scss'; // Нульові стилі
+@import '/src/assets/components/styles/_icon-font.scss'; // Нульові стилі
+
+body {
+  font-family: $font-OpenSans, sans-serif, Arial, system-ui;
+  font-size: #{$html-font-size}px;
+  background-color: $white;
+
+  &._scroll-lock {
+    overflow: hidden;
+  }
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.container {
+  max-width: $px-contWidthSum;
+  padding: 0 $px-contPadWidth;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.main {
+  flex: 1 1 auto;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.4);
+  transition: opacity 0.4s ease 0s, visibility 0.4s ease 0s;
+  z-index: 1000;
+  @media screen and (min-width: $px-tablet-768) {
+    display: none;
+  }
+
+  &--hidden {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+.loader {
+  width: 48px;
+  height: 48px;
+  border: 5px solid #fff;
+  border-bottom-color: #ff3d00;
+  border-radius: 50%;
+  display: inline-block;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+
+  @keyframes rotation {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+}
+
+*::-webkit-scrollbar {
+  width: 5px;
+
+  @media screen and (min-width: $px-tablet-768) {
+    width: 15px;
+  }
+}
+*::-webkit-scrollbar-track {
+  background-color: $dark-grey;
+}
+*::-webkit-scrollbar-thumb {
+  --opacity: 0.5;
+  background-color: $dark-grey2;
+  box-shadow: inset rgba(255, 255, 255, var(--opacity)) 0 0 4px;
+
+  &:hover {
+    --opacity: 0.8;
+  }
+}
+
+.shop-now-btn {
+  display: block;
+  background-color: $dark-grey1;
+  color: $white;
+  text-transform: uppercase;
+  padding: 8px 17px;
+  cursor: pointer;
+  transition: all 0.4s ease 0s;
+  &:hover {
+    filter: brightness(1.1);
+  }
+}
+
+._title-h2 {
+  font-family: $font-Federo;
+  font-size: 40px;
+  letter-spacing: 0.8px;
+  color: $dark-grey;
+  &.center {
+    text-align: center;
+  }
+  &.left {
+    text-align: left;
+  }
+  &.right {
+    text-align: right;
+  }
+  &.capitalize {
+    text-transform: capitalize;
+  }
+  &.uppercase {
+    text-transform: uppercase;
+  }
+}
