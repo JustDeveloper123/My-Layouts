@@ -1,0 +1,111 @@
+.footer {
+  padding-top: 61px;
+  padding-bottom: 130px;
+  @include resp-prop(padding-top, 61, 40, $contWidth, $mobileWidth, 0);
+  @include resp-prop(padding-bottom, 130, 80, $contWidth, $mobileWidth, 0);
+  background-color: $almost-white;
+  position: relative;
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('/images/vecteezy_interior-of-a-modern-living-room-in-3d-rendering_2070131.png')
+      left / cover no-repeat;
+    opacity: 0.3;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+  }
+
+  &__logo {
+    color: $dark-grey1;
+    font-family: $font-PottaOne;
+    font-family: Potta One;
+    font-size: 45px;
+    letter-spacing: -1.575px;
+  }
+
+  &__nav {
+    margin-top: 44px;
+    @include resp-prop(margin-top, 44, 20, $contWidth, $mobileWidth, 0);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;
+    @include resp-prop(gap, 30, 20, $contWidth, $mobileWidth, 0);
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  &__list-title {
+    color: $black;
+    font-size: 24px;
+    letter-spacing: -0.84px;
+    text-transform: uppercase;
+  }
+  &__list-link {
+    font-size: 20px;
+    letter-spacing: -0.7px;
+    color: $dark-grey1;
+    @include resp-prop(font-size, 20, 17, $contWidth, $mobileWidth, 0);
+    position: relative;
+    &:hover {
+      &::before {
+        width: 105%;
+        height: 4px;
+      }
+    }
+    &::before {
+      content: '';
+      position: absolute;
+      bottom: -8px;
+      right: 0;
+      width: 0%;
+      height: 1px;
+      background-color: $light-grey2;
+      transition: all 0.4s ease 0s;
+      border-radius: 5px 50% 50% 5px;
+      z-index: -1;
+    }
+
+    .icon {
+      color: $light-grey2;
+      margin-right: 11px;
+      font-size: 17px;
+      // &._icon-facebook {
+      // }
+      // &._icon-twitter {
+      // }
+      // &._icon-instagram {
+      // }
+    }
+  }
+
+  &__copy {
+    padding: 17px 20px;
+    width: 100%;
+    text-align: center;
+    background-color: $white;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
+  }
+  &__copy-text {
+    color: $dark-grey2;
+    font-size: 16px;
+    @include resp-prop(font-size, 16, 13, $contWidth, $mobileWidth, 0);
+  }
+}
